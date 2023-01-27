@@ -2,7 +2,7 @@ using ITensors, DelimitedFiles
 
 # A. Run this script in REPL and call imTimeEvo()
 # or
-# B. Call imTimeEvo() through the run_time_evo.jl file
+# B. Run run_time_evo.jl file from shell (julia run_time_evo.jl)
 
 # A. will be faster for repeated calls, as the functions will be compiled only once
 

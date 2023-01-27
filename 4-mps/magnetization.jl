@@ -5,7 +5,7 @@ using ITensors
 
 # A. Run this script in REPL and call functions expectSzAtSites() and expectSz()
 # or
-# B. Call these functions through the run_magnetization.jl file
+# B. Run run_magnetization.jl file from shell (julia run_magnetization.jl)
 
 # A. will be faster for repeated calls, as the functions will be compiled only once
 

@@ -3,7 +3,7 @@ using KrylovKit: eigsolve # import only eigsolve function as other functions mig
 
 # A. Run this script in REPL and call dmrgHeisenberg()
 # or
-# B. call dmrgHeisenberg() through the run_dmrg.jl file
+# B. Run run_dmrg.jl file from shell (julia run_dmrg.jl)
 
 # A. will be faster for repeated calls, as the functions will be compiled only once
 
