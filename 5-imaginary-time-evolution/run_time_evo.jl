@@ -3,7 +3,7 @@ include("time_evo.jl") #include the files with functions to be used in the scrip
     imTimeEvo(N = 20, delta = 1.0, J = 1.0, tau = 0.1, ttotal = 25.0, cutoff = 1E-8)
 end
 
-# For calling the script and passing the arguments from the shell
+# For parsing the arguments from shell use:
 #=
 include("time_evo.jl")
 @time begin  # block for timing the script

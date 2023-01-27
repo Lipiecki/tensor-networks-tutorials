@@ -3,7 +3,7 @@ include("magnetization.jl") #include the files with functions to be used in the 
     expectSzAtSites(h = 0.0, J = 4.0, N = 20)
 end
 
-# For calling the script and passing the arguments from the shell
+# For parsing the arguments from shell use:
 #=
 include("magnetization.jl")
 @time begin  # block for timing the script

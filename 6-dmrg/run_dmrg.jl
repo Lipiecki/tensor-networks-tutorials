@@ -4,7 +4,7 @@ include("dmrg.jl")
     dmrgHeisenberg(N = 20, delta = 1.0, J = 1.0)
 end
 
-# For calling the script and passing the arguments from the shell
+# For parsing the arguments from shell use:
 #=
 include("dmrg.jl")
 @time begin  # block for timing the script
