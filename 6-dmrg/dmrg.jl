@@ -38,7 +38,7 @@ function dmrgHeisenberg(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0)
     end
 
     H = MPO(os, sites)
-    ψ = randomMPS(sites)
+    psi = randomMPS(sites)
   
     sweeps = Sweeps(5)
     maxdim!(sweeps, 10, 20, 50, 100, 200)
@@ -48,28 +48,28 @@ function dmrgHeisenberg(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0)
     for sw in 1:sweeps.nsweep
         for (pos, direction) in sweeporder(N)    
             
-            orthogonalize!(ψ, pos)
-            position!(PH, ψ, pos)
+            orthogonalize!(psi, pos)
+            position!(PH, psi, pos)
 
-            ϕ = ψ[pos]*ψ[pos+1]
+            phi = psi[pos]*psi[pos+1]
 
-            vals, vecs = eigsolve(PH, ϕ, 1, ishermitian=true) # Krylov subspace method of finding the ground state
+            vals, vecs = eigsolve(PH, phi, 1, ishermitian=true) # Krylov subspace method of finding the ground state
 
             #energy = vals[1] 
             ϕ::ITensor = vecs[1]
 
-            U, S, V = svd(ϕ, inds(ψ[pos]), cutoff=sweeps.cutoff[sw], maxdim=sweeps.maxdim[sw])
+            U, S, V = svd(phi, inds(psi[pos]), cutoff=sweeps.cutoff[sw], maxdim=sweeps.maxdim[sw])
             
             if direction == :right
-                ψ[pos] = U
-                ψ[pos+1] = S*V
+                psi[pos] = U
+                psi[pos+1] = S*V
             else
-                ψ[pos] = U*S
-                ψ[pos+1] = V
+                psi[pos] = U*S
+                psi[pos+1] = V
             end
 
-            Epsi = apply(H, ψ)
-            E = inner(ψ, Epsi)
+            Epsi = apply(H, psi)
+            E = inner(psi, Epsi)
             println("Sweep $sw, bond ($pos, $(pos+1)), direction $direction, energy = $E")
         end
     end
