@@ -56,7 +56,7 @@ function dmrgHeisenberg(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0)
             vals, vecs = eigsolve(PH, phi, 1, ishermitian=true) # Krylov subspace method of finding the ground state
 
             #energy = vals[1] 
-            ϕ::ITensor = vecs[1]
+            phi::ITensor = vecs[1]
 
             U, S, V = svd(phi, inds(psi[pos]), cutoff=sweeps.cutoff[sw], maxdim=sweeps.maxdim[sw])
             
