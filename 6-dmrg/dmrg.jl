@@ -1,4 +1,4 @@
-using ITensors 
+using ITensors
 using KrylovKit: eigsolve # import only eigsolve function as other functions might conflict with ITensors
 
 # An example of how to call dmrgHeisenberg() is provided in the run_dmrg.jl file
@@ -26,7 +26,7 @@ dmrgHeisenberg(; N = 20, delta = 1.0, J = 1.0)
 Run DMRG on the Heisenberg model with N sites
 """
 function dmrgHeisenberg(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0)
-
+    println("Running DMRG on the Heisenberg model with N = $N, delta = $delta, J = $J")
     sites = siteinds("S=1/2", N; conserve_qns=false)  
     
     os = OpSum()
@@ -53,7 +53,7 @@ function dmrgHeisenberg(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0)
 
             phi = psi[pos]*psi[pos+1]
 
-            vals, vecs = eigsolve(PH, phi, 1, ishermitian=true) # Krylov subspace method of finding the ground state
+            vals, vecs = eigsolve(PH, phi, 1, :LM, ishermitian=true) # Krylov subspace method of finding the ground state
 
             #energy = vals[1] 
             phi::ITensor = vecs[1]
