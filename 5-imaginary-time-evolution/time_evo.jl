@@ -1,6 +1,10 @@
 using ITensors, DelimitedFiles
 
-# An example of how to call imTimeEvo() is provided in the run_time_evo.jl file
+# A. Run this script in REPL and call imTimeEvo()
+# or
+# B. Call imTimeEvo() through the run_time_evo.jl file
+
+# A. will be faster for repeated calls, as the functions will be compiled only once
 
 function imTimeEvo(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0, tau::Real = 0.1, ttotal::Real = 25.0, cutoff::Real = 1E-8)
   # Number of time steps

@@ -3,7 +3,11 @@ using ITensors
 # This file contains two functions for calculating expected value of Sz operator at each site
 # in the chain of spin 1/2 particles with transverse-field Ising Hamiltonian
 
-# An example of how to call these functions is provided in the run_magnetization.jl file
+# A. Run this script in REPL and call functions expectSzAtSites() and expectSz()
+# or
+# B. Call these functions through the run_magnetization.jl file
+
+# A. will be faster for repeated calls, as the functions will be compiled only once
 
 """
 expectSzAtSites(h, J, N)

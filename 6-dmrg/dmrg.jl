@@ -1,7 +1,11 @@
 using ITensors
 using KrylovKit: eigsolve # import only eigsolve function as other functions might conflict with ITensors
 
-# An example of how to call dmrgHeisenberg() is provided in the run_dmrg.jl file
+# A. Run this script in REPL and call dmrgHeisenberg()
+# or
+# B. call dmrgHeisenberg() through the run_dmrg.jl file
+
+# A. will be faster for repeated calls, as the functions will be compiled only once
 
 """
 sweeporder(n) returns a list of tuples that contains 
