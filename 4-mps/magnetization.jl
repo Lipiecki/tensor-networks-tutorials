@@ -3,9 +3,9 @@ using ITensors
 # This file contains two functions for calculating expected value of Sz operator at each site
 # in the chain of spin 1/2 particles with transverse-field Ising Hamiltonian
 
-# A. Run this script in REPL and call functions expectSzAtSites() and expectSz()
+# Run this script in REPL and call functions expectSzAtSites() and expectSz()
 # or
-# B. Run run_magnetization.jl file from shell (julia run_magnetization.jl)
+# run run_magnetization.jl file from shell (julia run_magnetization.jl)
 
 # For repeated calls avoid running (julia run_magnetization.jl) multiple times,
 # because it creates a new instance of Julia and will compile the function

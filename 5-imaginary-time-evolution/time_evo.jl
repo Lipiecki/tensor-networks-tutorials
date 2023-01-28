@@ -1,8 +1,8 @@
 using ITensors, DelimitedFiles
 
-# A. Run this script in REPL and call imTimeEvo()
+# Run this script in REPL and call imTimeEvo()
 # or
-# B. Run run_time_evo.jl file from shell (julia run_time_evo.jl)
+# run run_time_evo.jl file from shell (julia run_time_evo.jl)
 
 # For repeated calls avoid running (julia run_time_evo.jl) multiple times,
 # because it creates a new instance of Julia and will compile the function
