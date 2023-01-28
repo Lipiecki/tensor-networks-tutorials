@@ -5,7 +5,7 @@ using ITensors, DelimitedFiles
 # B. Run run_time_evo.jl file from shell (julia run_time_evo.jl)
 
 # For repeated calls avoid running (julia run_time_evo.jl) multiple times,
-# because it will creates a new instance of Julia and will compile the function
+# because it creates a new instance of Julia and will compile the function
 # each time. Either run the script in REPL and call the functions multiple times or
 # modify the run_time_evo.jl file to perform multiple calls.
 

@@ -8,7 +8,7 @@ using ITensors
 # B. Run run_magnetization.jl file from shell (julia run_magnetization.jl)
 
 # For repeated calls avoid running (julia run_magnetization.jl) multiple times,
-# because it will create a new instance of Julia and will compile the function
+# because it creates a new instance of Julia and will compile the function
 # each time. Either run the script in REPL and call the functions multiple times or
 # modify the run_magnetization.jl file to perform multiple calls.
 
