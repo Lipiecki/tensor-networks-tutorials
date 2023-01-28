@@ -2,9 +2,9 @@ using ITensors, DelimitedFiles
 
 # Run this script in REPL and call imTimeEvo()
 # or
-# run run_time_evo.jl file from shell (julia run_time_evo.jl)
+# run run_time_evo.jl file from shell `julia run_time_evo.jl`
 
-# For repeated calls avoid running (julia run_time_evo.jl) multiple times,
+# For repeated calls avoid running `julia run_time_evo.jl` multiple times,
 # because it creates a new instance of Julia and will compile the function
 # each time. Either run the script in REPL and call the functions multiple times or
 # modify the run_time_evo.jl file to perform multiple calls.
