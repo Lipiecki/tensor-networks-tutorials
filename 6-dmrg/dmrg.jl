@@ -5,7 +5,10 @@ using KrylovKit: eigsolve # import only eigsolve function as other functions mig
 # or
 # B. Run run_dmrg.jl file from shell (julia run_dmrg.jl)
 
-# A. will be faster for repeated calls, as the functions will be compiled only once
+# For repeated calls avoid running (julia run_dmrg.jl) multiple times,
+# because it will creates a new instance of Julia and will compile the function
+# each time. Either run the script in REPL and call the functions multiple times or
+# modify the run_dmrg.jl file to perform multiple calls.
 
 """
 sweeporder(n) returns a list of tuples that contains 

@@ -4,7 +4,10 @@ using ITensors, DelimitedFiles
 # or
 # B. Run run_time_evo.jl file from shell (julia run_time_evo.jl)
 
-# A. will be faster for repeated calls, as the functions will be compiled only once
+# For repeated calls avoid running (julia run_time_evo.jl) multiple times,
+# because it will creates a new instance of Julia and will compile the function
+# each time. Either run the script in REPL and call the functions multiple times or
+# modify the run_time_evo.jl file to perform multiple calls.
 
 function imTimeEvo(; N::Integer = 20, delta::Real = 1.0, J::Real = 1.0, tau::Real = 0.1, ttotal::Real = 25.0, cutoff::Real = 1E-8)
   # Number of time steps
